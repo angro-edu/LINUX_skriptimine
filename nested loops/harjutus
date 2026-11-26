@@ -1,0 +1,13 @@
+#!/bin/bash
+# Lihtne pesastatud for-tsükkel (3x3 korrutustabel)
+
+for (( i=1; i<=3; i++ ))
+do
+    for (( j=1; j<=3; j++ ))
+    do
+        tulemus=$(( i * j ))
+        echo -n "$i x $j = $tulemus   "
+    done
+    echo "" # Reavahetus pärast iga välimise tsükli sammu
+done
+
