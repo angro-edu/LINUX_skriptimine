@@ -1,0 +1,20 @@
+#!/bin/bash
+# Nimi: Angro Raja
+# Skripti nimi: kujund
+# Ülesande kirjeldus: Skript küsib ridade arvu ja trükib vastava kahaneva kolmnurga tärnidest.
+
+# Küsime kasutajalt kujundi ridade arvu
+read -p "Sisesta ridade arv: " read_arv
+
+# Välimine tsükkel loeb ridu alates sisestatud arvust alla kuni 1-ni
+for (( i=read_arv; i>=1; i-- ))
+do
+    # Sisemine tsükkel trükib antud reale 'i' tükki tärne
+    for (( j=1; j<=i; j++ ))
+    do
+        echo -n "* "
+    done
+
+    # Teeme rea lõpus reavahetuse
+    echo ""
+done

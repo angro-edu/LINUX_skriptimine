@@ -1,0 +1,16 @@
+#!/bin/bash
+# Nimi: Angro Raja
+# Skripti nimi: info
+# Ülesande kirjeldus: Skript tervitab sisselogitud kasutajat ning väljastab hetke kuupäeva ja kellaaja.
+
+# Loeme hetkel sisselogitud kasutaja nime keskkonnamuutujast $USER
+kasutaja=$USER
+
+# Vormindame kuupäeva (PP.KK.AAAA) ja kellaaja (T:MM, kus %-H eemaldab tunnilt eesoleva nulli, nt 8:45)
+kuupaev=$(date "+%d.%m.%Y")
+kellaaeg=$(date "+%-H:%M")
+
+# Väljastame tervituse ning kuupäeva ja kellaaja
+echo "Tere, $kasutaja!"
+echo "Täna on $kuupaev kell $kellaaeg"
+
